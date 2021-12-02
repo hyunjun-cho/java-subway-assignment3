@@ -1,6 +1,10 @@
 plugins {
     id 'java'
+    id 'application'
 }
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -19,3 +23,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+run {
+	standardInput = System.in
+}
+
+mainClassName = 'subway.Application';
